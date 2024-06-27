@@ -1,9 +1,12 @@
 /**
- * @param {...(null|boolean|number|string|Array|Object)} args
- * @return {number}
+ * @typedef {null | boolean | number | string | JSONValue[] | {[key: string]: JSONValue}} JSONValue
  */
-var argumentsLength = function (...args) {};
 
 /**
- * argumentsLength(1, 2, 3); // 3
+ * @param {...JSONValue} args
+ * @returns {number}
  */
+function argumentsLength(...args) {
+    return args.length;
+  }
+  
